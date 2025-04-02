@@ -17324,6 +17324,7 @@ ol.ui.horizontal.list li:before,
   z-index: 1000;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  background-color: var(--background-color) !important;
 }
 
 /* Static Shape */
@@ -17353,7 +17354,7 @@ ol.ui.horizontal.list li:before,
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   border-radius: 500rem;
-  border-color: #767676 transparent transparent;
+  border-color: var(--button-bg) transparent transparent;
   border-style: solid;
   border-width: 0.2em;
   -webkit-box-shadow: 0px 0px 0px 1px transparent;
@@ -32043,7 +32044,7 @@ to prevent manually triggering */
 
 .ui.toggle.checkbox input:checked~.box:before,
 .ui.toggle.checkbox input:checked~label:before {
-  background-color: #2185d0 !important;
+  background-color: #ff4b08 !important;
 }
 
 .ui.toggle.checkbox input:checked~.box:after,
@@ -32064,7 +32065,7 @@ to prevent manually triggering */
 
 .ui.toggle.checkbox input:focus:checked~.box:before,
 .ui.toggle.checkbox input:focus:checked~label:before {
-  background-color: #0d71bb !important;
+  background-color: #ff4b08 !important;
 }
 
 /*******************************

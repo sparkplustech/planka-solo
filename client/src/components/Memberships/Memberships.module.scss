@@ -1,9 +1,9 @@
 :global(#app) {
   .addUser {
-    background: rgba(0, 0, 0, 0.24);
+    background: var(--input-bg);
     border-radius: 50%;
     box-shadow: none;
-    color: #fff;
+    color: var(--text-color);
     line-height: 36px;
     margin: 0;
     padding: 0;

@@ -2,6 +2,8 @@
   .button {
     min-height: 30px;
     vertical-align: top;
+    background-color: var(--button-bg);
+    box-shadow: rgb(231, 231, 231) 0px 1px 10px 0px;
   }
 
   .controls {

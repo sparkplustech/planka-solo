@@ -18,6 +18,7 @@
   .item {
     cursor: auto;
     user-select: auto;
+    color: var(--nav-icon-color);
 
     &:before {
       background: none;
@@ -26,7 +27,7 @@
     &:active,
     &:hover {
       background: transparent;
-      color: rgba(255, 255, 255, 0.9);
+      color: var(--nav-icon-color);
 
       .target {
         opacity: 1;
@@ -36,11 +37,11 @@
 
   .itemHoverable:hover {
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.32);
+    background: var(--navbar-hover);
   }
 
   .logo {
-    color: #fff;
+    color: var(--text-color);
     flex: 0 0 auto;
     letter-spacing: 3.5px;
     line-height: 50px;
@@ -89,6 +90,7 @@
   .userName {
     display: none;
     margin-right: 10px;
+    color: var(--text-color);
 
     @media only screen and (min-width: 797px) {
       display: block;
@@ -96,7 +98,7 @@
   }
 
   .wrapper {
-    background: rgba(0, 0, 0, 0.24);
+    background: var(--nav-background-color);
     display: flex;
     flex: 0 0 auto;
   }

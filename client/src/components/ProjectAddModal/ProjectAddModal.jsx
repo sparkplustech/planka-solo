@@ -37,7 +37,7 @@ const ProjectAddModal = React.memo(({ defaultData, isSubmitting, onCreate, onClo
   }, []);
 
   return (
-    <Modal open basic closeIcon size="tiny" onClose={onClose}>
+    <Modal open basic closeIcon size="tiny" className="createProject-popup" onClose={onClose}>
       <Modal.Content>
         <Header inverted size="huge">
           {t('common.createProject', {
@@ -58,12 +58,12 @@ const ProjectAddModal = React.memo(({ defaultData, isSubmitting, onCreate, onClo
           />
           <Button
             inverted
-            color="green"
             icon="checkmark"
             content={t('action.createProject')}
             floated="right"
             loading={isSubmitting}
             disabled={isSubmitting}
+            className="inverted-btn createPro-Btn"
           />
         </Form>
       </Modal.Content>

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
@@ -30,6 +30,19 @@ const Header = React.memo(
     onUserSettingsClick,
     onLogout,
   }) => {
+    const [isDarkMode, setIsDarkMode] = useState(() => {
+      return localStorage.getItem('theme') === 'dark';
+    });
+
+    useEffect(() => {
+      document.body.classList.toggle('dark-theme', isDarkMode);
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    }, [isDarkMode]);
+
+    const toggleTheme = () => {
+      setIsDarkMode((prevMode) => !prevMode);
+    };
+
     const handleProjectSettingsClick = useCallback(() => {
       if (canEditProject) {
         onProjectSettingsClick();
@@ -43,7 +56,7 @@ const Header = React.memo(
       <div className={styles.wrapper}>
         {!project && (
           <Link to={Paths.ROOT} className={classNames(styles.logo, styles.title)}>
-            Planka
+            SOLO
           </Link>
         )}
         <Menu inverted size="large" className={styles.menu}>
@@ -70,6 +83,12 @@ const Header = React.memo(
             </Menu.Menu>
           )}
           <Menu.Menu position="right">
+            <Menu.Item
+              onClick={toggleTheme}
+              className={classNames(styles.item, styles.itemHoverable)}
+            >
+              <Icon name={isDarkMode ? 'moon' : 'sun'} />
+            </Menu.Item>
             {canEditUsers && (
               <Menu.Item
                 className={classNames(styles.item, styles.itemHoverable)}

@@ -1,6 +1,80 @@
 :global {
+
+  :root {
+    --background-color: #f3f5f8;
+    --text-color: #333333;
+    --nav-background-color: #FFFFFF;
+    --nav-icon-color: #000000B3;
+    --button-bg: #ff4b08;
+    --text-color2: #ff4b08;
+    --project-bg: #ffe5dc99;
+    --project-nav-bg: #ffe5dc;
+    --toggle-text: #717273;
+    --tab-hover-bg: #FFFFFF99;
+    --tab-active-bg: #FFFFFFB3;
+    --input-bg: #FFFFFF;
+    --border-color: #0000003d;
+    --input-border: #0000003d;
+    --navbar-hover: #ffe5dc52;
+
+
+    // --menu-bg: #{$menu-bg};
+    // --menu-text: #{$menu-text};
+    // --button-bg: #{$button-bg};
+    // --button-text: #{$button-text};
+
+    .ui.popup,
+    .ui.modal {
+      border-radius: 8px !important;
+    }
+
+    .ui.modal>.icon:first-child+* {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .ui.modal> :last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .ui.positive.button,
+    .ui.positive.button:hover {
+      background-color: var(--button-bg);
+      box-shadow: rgb(231, 231, 231) 0px 1px 10px 0px;
+    }
+
+    .ui.dimmer {
+      background-color: #00000052 !important;
+    }
+
+  }
+
+  body.dark-theme {
+    --background-color: #22252a;
+    --text-color: #FFFFFF;
+    --nav-background-color: #0000003d;
+    --nav-icon-color: #ffffffe6;
+    --button-bg: #ff4b08;
+    --text-color2: #FFFFFF;
+    --project-bg: #555;
+    --project-nav-bg: #00000029;
+    --toggle-text: #ffffffb8;
+    --tab-hover-bg: #0000003d;
+    --tab-active-bg: #00000052;
+    --input-bg: #0000003D;
+    --border-color: transparent;
+    --input-border: #0000003d;
+    --navbar-hover: #00000052;
+    // --menu-bg: #{$dark-menu-bg};
+    // --menu-text: #{$dark-menu-text};
+
+    // --button-text: #{$dark-button-text};
+  }
+
   #app {
-    background: #22252a;
+
+    background: var(--background-color);
 
     .react-datepicker {
       border: 0;
@@ -104,6 +178,36 @@
 
     .pswp .pswp__img--placeholder {
       display: none !important;
+    }
+
+    .inverted-btn {
+      background-color: white;
+      color: #ff4b08;
+      border: 1px solid #ff4b08;
+      border-radius: 8px;
+    }
+
+    .createProject-popup {
+      background-color: #FFFFFF;
+      color: #333333;
+
+      .ui.header {
+        color: #000000 !important;
+      }
+
+      .createPro-Btn {
+        margin-bottom: 20px;
+      }
+
+      .ui.input>input {
+        border-color: var(--input-border);
+        border-radius: 8px !important;
+        color: #333333 !important;
+      }
+
+      .ui.input>input:focus {
+        border-color: var(--button-bg) !important;
+      }
     }
   }
 
@@ -338,7 +442,8 @@
   }
 
   .backgroundSteelGrey {
-    background: radial-gradient(circle farthest-corner at -4% -12.9%, rgba(74, 98, 110, 1) 0.3%, rgba(30, 33, 48, 1) 90.2%) !important;
+    // background: radial-gradient(circle farthest-corner at -4% -12.9%, rgba(74, 98, 110, 1) 0.3%, rgba(30, 33, 48, 1) 90.2%) !important;
+    // background: #ffffff !important;
   }
 
   .backgroundHeatWaves {

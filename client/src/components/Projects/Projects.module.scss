@@ -35,13 +35,14 @@
   }
 
   .card {
-    border-radius: 4px;
+    border-radius: 8px;
     height: 150px;
     transition: all 200ms ease;
+    border: none;
   }
 
   .cardOverlay {
-    background: #000000;
+    // background: #000000;
     bottom: 0;
     left: 0;
     opacity: 0.3;
@@ -75,7 +76,7 @@
   }
 
   .open {
-    background: #555;
+    background: var(--project-bg);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
     color: #fff;
     position: relative;
@@ -97,6 +98,7 @@
     padding: 24px 20px;
     position: absolute;
     word-break: break-word;
+    color: var(--text-color2);
   }
 
   .project {

@@ -11,11 +11,13 @@
 
   .messageIcon {
     margin-top: -84px;
+    color: var(--text-color);
   }
 
   .messageTitle {
     font-size: 32px;
     margin: 24px 0 8px;
+    color: var(--text-color);
   }
 
   .messageContent {
@@ -23,6 +25,7 @@
     line-height: 1.4;
     margin: 4px 0 0;
     text-align: center;
+    color: var(--text-color);
   }
 
   .wrapper {
@@ -31,7 +34,7 @@
   }
 
   .wrapperBoard {
-    margin-top: 174px;
+    margin-top: 184px;
   }
 
   .wrapperFlex {

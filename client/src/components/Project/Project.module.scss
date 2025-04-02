@@ -1,9 +1,9 @@
 :global(#app) {
   .wrapper {
-    background: rgba(0, 0, 0, 0.16);
+    background: var(--project-nav-bg);
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 10px 20px 0;
+    padding: 10px 20px;
   }
 }
