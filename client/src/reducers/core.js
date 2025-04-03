@@ -6,11 +6,17 @@ import ModalTypes from '../constants/ModalTypes';
 const initialState = {
   isLogouting: false,
   currentModal: null,
+  theme: 'light',
 };
 
 // eslint-disable-next-line default-param-last
 export default (state = initialState, { type, payload }) => {
   switch (type) {
+    case ActionTypes.THEME_TOGGLE:
+      return {
+        ...state,
+        theme: state.theme === 'light' ? 'dark' : 'light',
+      };
     case LOCATION_CHANGE_HANDLE:
     case ActionTypes.MODAL_CLOSE:
       return {
