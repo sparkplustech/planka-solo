@@ -859,6 +859,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
     box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
   will-change: "";
   -webkit-tap-highlight-color: transparent;
+  border-radius: 8px;
 }
 
 /*******************************
@@ -4546,7 +4547,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 .ui.primary.buttons .button,
 .ui.primary.button {
-  background-color: #2185d0;
+  background-color: #ff4b08;
   color: #ffffff;
   text-shadow: none;
   background-image: none;
@@ -4559,21 +4560,21 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 .ui.primary.buttons .button:hover,
 .ui.primary.button:hover {
-  background-color: #1678c2;
+  background-color: #ff4b08;
   color: #ffffff;
   text-shadow: none;
 }
 
 .ui.primary.buttons .button:focus,
 .ui.primary.button:focus {
-  background-color: #0d71bb;
+  background-color: #ff4b08;
   color: #ffffff;
   text-shadow: none;
 }
 
 .ui.primary.buttons .button:active,
 .ui.primary.button:active {
-  background-color: #1a69a4;
+  background-color: #ff4b08;
   color: #ffffff;
   text-shadow: none;
 }
@@ -4582,7 +4583,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 .ui.primary.buttons .active.button:active,
 .ui.primary.active.button,
 .ui.primary.button .active.button:active {
-  background-color: #1279c6;
+  background-color: #ff4b08;
   color: #ffffff;
   text-shadow: none;
 }
@@ -14252,7 +14253,7 @@ img.ui.bordered.image {
   font-family: "Nunitoga", "Helvetica Neue", Arial, Helvetica, sans-serif;
   padding: 0.67857143em 1em;
   background: #ffffff;
-  border: 1px solid rgba(34, 36, 38, 0.15);
+  border: 1px solid var(--border-color);
   color: rgba(0, 0, 0, 0.87);
   border-radius: 0.28571429rem;
   -webkit-transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
@@ -14355,7 +14356,7 @@ img.ui.bordered.image {
 
 .ui.input.focus>input,
 .ui.input>input:focus {
-  border-color: #85b7d9;
+  border-color: #ff4b08;
   background: #ffffff;
   color: rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: none;
@@ -20660,7 +20661,7 @@ ol.ui.horizontal.list li:before,
 .ui.form input[type="file"]:focus,
 .ui.form input[type="url"]:focus {
   color: rgba(0, 0, 0, 0.95);
-  border-color: #85b7d9;
+  border-color: var(--button-bg);
   border-radius: 0.28571429rem;
   background: #ffffff;
   -webkit-box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
@@ -40703,14 +40704,14 @@ textarea {
 *******************************/
 
 .ui.input {
-  color: #17394d;
+  color: #333333;
 }
 
 .ui.input>input {
   line-height: 20px !important;
   padding: 8px 12px !important;
-  color: #17394d !important;
-  border-radius: 3px !important;
+  color: #333333 !important;
+  border-radius: 8px !important;
 }
 
 /*******************************
