@@ -29,12 +29,19 @@ const Header = React.memo(
     onNotificationDelete,
     onUserSettingsClick,
     onLogout,
-    isDarkMode,
-    onToggleTheme,
   }) => {
+    const [isDarkMode, setIsDarkMode] = useState(() => {
+      return localStorage.getItem('theme') === 'dark';
+    });
+
     useEffect(() => {
       document.body.classList.toggle('dark-theme', isDarkMode);
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     }, [isDarkMode]);
+
+    const toggleTheme = () => {
+      setIsDarkMode((prevMode) => !prevMode);
+    };
 
     const handleProjectSettingsClick = useCallback(() => {
       if (canEditProject) {
@@ -77,7 +84,7 @@ const Header = React.memo(
           )}
           <Menu.Menu position="right">
             <Menu.Item
-              onClick={onToggleTheme}
+              onClick={toggleTheme}
               className={classNames(styles.item, styles.itemHoverable)}
             >
               <Icon name={isDarkMode ? 'moon' : 'sun'} />
@@ -129,8 +136,6 @@ Header.propTypes = {
   onNotificationDelete: PropTypes.func.isRequired,
   onUserSettingsClick: PropTypes.func.isRequired,
   onLogout: PropTypes.func.isRequired,
-  isDarkMode: PropTypes.bool.isRequired,
-  onToggleTheme: PropTypes.func.isRequired,
 };
 
 Header.defaultProps = {

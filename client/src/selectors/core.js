@@ -111,8 +111,6 @@ export const selectNextTaskPosition = createSelector(
   },
 );
 
-export const selectTheme = (state) => state.core.theme;
-
 export default {
   selectAccessToken,
   selectIsLogouting,
@@ -121,5 +119,4 @@ export default {
   selectNextListPosition,
   selectNextCardPosition,
   selectNextTaskPosition,
-  selectTheme,
 };

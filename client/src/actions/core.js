@@ -59,12 +59,7 @@ logout.invalidateAccessToken = () => ({
   payload: {},
 });
 
-const toggleTheme = () => ({
-  type: ActionTypes.THEME_TOGGLE,
-});
-
 export default {
   initializeCore,
   logout,
-  toggleTheme,
 };

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import selectors from '../selectors';
 import entryActions from '../entry-actions';
 import Header from '../components/Header';
-import Actions from '../actions/core';
 
 const mapStateToProps = (state) => {
   const isLogouting = selectors.selectIsLogouting(state);
@@ -12,7 +11,6 @@ const mapStateToProps = (state) => {
   const currentProject = selectors.selectCurrentProject(state);
   const notifications = selectors.selectNotificationsForCurrentUser(state);
   const isCurrentUserManager = selectors.selectIsCurrentUserManagerForCurrentProject(state);
-  const theme = selectors.selectTheme(state);
 
   return {
     notifications,
@@ -21,7 +19,6 @@ const mapStateToProps = (state) => {
     user: currentUser,
     canEditProject: isCurrentUserManager,
     canEditUsers: currentUser.isAdmin,
-    isDarkMode: theme === 'dark',
   };
 };
 
@@ -33,7 +30,6 @@ const mapDispatchToProps = (dispatch) =>
       onNotificationDelete: entryActions.deleteNotification,
       onUserSettingsClick: entryActions.openUserSettingsModal,
       onLogout: entryActions.logout,
-      onToggleTheme: Actions.toggleTheme,
     },
     dispatch,
   );
