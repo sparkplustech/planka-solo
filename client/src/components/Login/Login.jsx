@@ -9,6 +9,7 @@ import { Input } from '../../lib/custom-ui';
 
 import { useForm } from '../../hooks';
 import { isUsername } from '../../utils/validator';
+import Logo from '../../assets/images/solo-logo.png';
 
 import styles from './Login.module.scss';
 
@@ -146,16 +147,19 @@ const Login = React.memo(
     return (
       <div className={classNames(styles.wrapper, styles.fullHeight)}>
         <Grid verticalAlign="middle" className={styles.fullHeightPaddingFix}>
-          <Grid.Column widescreen={4} largeScreen={5} computer={6} tablet={16} mobile={16}>
+          <Grid.Column mobile={16} className={classNames(styles.cover, styles.fullHeight)}>
             <Grid verticalAlign="middle" className={styles.fullHeightPaddingFix}>
               <Grid.Column>
                 <div className={styles.loginWrapper}>
                   <Header
                     as="h1"
                     textAlign="center"
-                    content={t('common.logInToPlanka')}
+                    content={t('Log in to SOLO Projects')}
                     className={styles.formTitle}
                   />
+                  <div className="logo-container">
+                    <img src={Logo} alt="logo" />
+                  </div>
                   <div>
                     {message && (
                       <Message
@@ -196,13 +200,14 @@ const Login = React.memo(
                         </div>
                         <Form.Button
                           primary
-                          size="large"
-                          icon="right arrow"
-                          labelPosition="right"
+                          // size="large"
+                          // icon="right arrow"
+                          // labelPosition="right"
                           content={t('action.logIn')}
-                          floated="right"
+                          // floated="right"
                           loading={isSubmitting}
                           disabled={isSubmitting || isSubmittingUsingOidc}
+                          className="login-btn"
                         />
                       </Form>
                     )}
@@ -225,7 +230,7 @@ const Login = React.memo(
               </Grid.Column>
             </Grid>
           </Grid.Column>
-          <Grid.Column
+          {/* <Grid.Column
             widescreen={12}
             largeScreen={11}
             computer={10}
@@ -242,7 +247,7 @@ const Login = React.memo(
                 className={styles.descriptionSubtitle}
               />
             </div>
-          </Grid.Column>
+          </Grid.Column> */}
         </Grid>
       </div>
     );
